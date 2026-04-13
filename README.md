@@ -18,7 +18,7 @@ The similarity can be calculated by using the length of the compression of two s
 len(1) + len(2) / len(1 + 2) --> large (similar)
 len(1) + len(3) / len(1 + 3) --> small (dissimilar)
 ```
-</br>
+
 The same concept can be applied to fragments and losses in tandem mass spectrometry with some small modifications:
 - word ==> fragment or loss
 - len of compression ==> intensity (matching fragments get (intensity_1 + intensity_2 / 2))
