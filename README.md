@@ -1,8 +1,7 @@
 # NapkinSimilarity
 NapkinSimiliarity is a MS2 similarity score than can be explained on a napkin. </br>
 
-picture of napkin
-
+![Algorithm explained on the napkin.](original_napkin.jpg)
 
 ## How does it work?
 Even tough it can be explained on a napkin it might not be entire clear from the napkin alone so let's go through it quickly. The similarity score is using the compression distance (Zip It! https://www.youtube.com/watch?v=aLaYgzmRPa8). 
