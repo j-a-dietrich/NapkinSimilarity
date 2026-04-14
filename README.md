@@ -11,7 +11,7 @@ Let's take three sentences:
 - (2) Napkins are your best companion while eating ice-cream
 - (3) Ancient civilisations were already using napkins
 
-(1) and (2) are very similar only Spaghetti and ice-cream differ. This can be compressed efficiently. (1) and (3) are very different and therefore you cannot compress as much.
+(1) and (2) are very similar; only Spaghetti and ice-cream differ. This can be compressed efficiently. (1) and (3) are very different and therefore they cannot compress as much.
 </br>
 The similarity can be calculated by using the length of the compression of two sentence alone compared to the two sentences combined.
 ```
@@ -27,9 +27,7 @@ The same concept can be applied to fragments and losses in tandem mass spectrome
 ## How to install?
 ```
 git clone https://github.com/j-a-dietrich/NapkinSimilarity.git
-
 cd NapkinSimilarity
-
 pip install -e .
 ```
 
