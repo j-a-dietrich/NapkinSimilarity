@@ -66,7 +66,7 @@ def calc_score(mz1, int1, mz2, int2, ppm):
 
     score = 2.0 * (1.0 - spec12_density / (spec1_density + spec2_density))
     
-    return score, match_mz[:k], match_score[:k] # currently not further used even though needed for explanation
+    return score, match_mz[:k], match_score[:k]
 
 
 def run(spec1, spec2, ppm=10):
@@ -74,12 +74,12 @@ def run(spec1, spec2, ppm=10):
         o1, o2 = np.argsort(mz_a), np.argsort(mz_b)
         return calc_score(mz_a[o1], int_a[o1], mz_b[o2], int_b[o2], ppm)
 
-    peak_score = sorted_score(
+    peak_score, matched_mz, matched_mz_score = sorted_score(
         spec1.peaks.mz, spec1.peaks.intensities,
         spec2.peaks.mz, spec2.peaks.intensities
     )
-    loss_score = sorted_score(
+    loss_score, matched_loss, matched_loss_score = sorted_score(
         spec1.losses.mz, spec1.losses.intensities,
         spec2.losses.mz, spec2.losses.intensities
     )
-    return (peak_score[0] + loss_score[0])/2
+    return (peak_score + loss_score)/2, matched_mz, matched_mz_score # losses are ignored for now
